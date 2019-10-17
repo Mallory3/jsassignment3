@@ -1,0 +1,6 @@
+API Key
+ysDsXaAmKyM7ZIHqY0GV82hRBGOekRlMVGopwoQj6zI9mlPjfg 
+Secret
+5gcrFTWK3FcK88pvVW7xTaTCPimT2JA8yoGfrHG4
+
+curl -d "grant_type=client_credentials&client_id={ysDsXaAmKyM7ZIHqY0GV82hRBGOekRlMVGopwoQj6zI9mlPjfg}&client_secret={5gcrFTWK3FcK88pvVW7xTaTCPimT2JA8yoGfrHG4}" https://api.petfinder.com/v2/oauth2/token
