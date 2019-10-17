@@ -100,8 +100,4 @@ fetch(url)
   })
 })
 })
-// generateAdvice.addEventListener('click', keys.forEach( function(x) {
-//   const values = results[x]
-//   updateAdviceDisplay(values.advice)
-//   }))
-  // onClick.className = "navMenu closedState"
+

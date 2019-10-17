@@ -16,83 +16,100 @@ menuDissappear.addEventListener('click', function() {
 
 
 //content
-function writeToPage(text) {
-  let el = document.createElement('div')
-  el.id = 'display'
-  el.style = `
-    padding: 20px 40px;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-    font-family: sans-serif;
-    display: block;
-    max-width:20em;
-  `
-  el.textContent = text
-  document.body.appendChild(el)
-}
-
-function writeToPage2(text) {
-  let el = document.createElement('div')
-  el.id = 'display'
-  el.style = `
-    padding: 20px 40px;
-    border-radius: 5px;
-    background: grey;
-    color: white;
-    font-family: sans-serif;
-    display: block;
-    max-width:20em;
-  `
-  el.textContent = text
-  document.body.appendChild(el)
-}
-
-function writeToPage3(text) {
-  let el = document.createElement('div')
-  el.id = 'display'
-  el.style = `
-    padding: 20px 40px;
-    border-radius: 5px;
-    background: red;
-    color: white;
-    font-family: sans-serif;
-    display: block;
-    max-width:20em;
-  `
-  el.textContent = text
-  document.body.appendChild(el)
-}
-
-function updateDisplay (text) {
-  const el = document.querySelector('#display')  
-  el.textContent = text
-}
-
-const url = 'https://swapi.co/api/planets/1'
-
-writeToPage('Loading...')
 
 
-fetch(url)
-  .then(response => {return response.json()
-  .then(results =>{
-    console.log(results)
-  const keys = Object.keys(results)
-  /*just the value*/
-  console.log(results.name)
-  console.log(results.diameter)
-  writeToPage3(results.name)
+function getToken() {
+  let formData = new FormData()
+  formData.append('grant_type','client_credentials' )
+  formData.append('client_id','ysDsXaAmKyM7ZIHqY0GV82hRBGOekRlMVGopwoQj6zI9mlPjfg' )
+  formData.append('client_secret','5gcrFTWK3FcK88pvVW7xTaTCPimT2JA8yoGfrHG4' )
 
-  console.log(keys);
-  keys.forEach( function(x) {
-    const values = results[x]
-    console.log(values, x)
-    writeToPage(x)
-    writeToPage2(values)
 
-    console.log(keys, x)
+  const url = "https://api.petfinder.com/v2/oauth2/token"
+  return fetch(url, {
+      method: 'POST',
+ 
+      body: formData
   })
+  .then(x => {
+
+    return x.json()})
+    .then(results =>{
+      return results.access_token
+    })
+
+}
+
+
+const getSomething = (token) => {
+  const url = 'https://api.petfinder.com/v2/animals?type=dog&page=2'
+  const config = {
+    headers: {
+      'Authorization': 'Bearer  ' + token
+    }
+  }
+  return fetch(url, config).then(x => x.json())
+    
+}
+
+
+function work () {
+ 
+}
+
+// getToken().then(token => {
+//     getSomething(token).then(x => {
+//       // do someting
+//       work(x)
+//       console.log(x)
+//     })
+// })
+
+getToken().then(token => {
+  getSomething(token).then(x => {
+    
+    
+
+    function writeToPage(text) {
+      const el = document.createElement('div')
+      el.id = 'Display'
+      el.style = `
+        padding: 20px 40px;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        font-family: 'Kalam', cursive;
+        font-size: 25px;
+        display: block;
+        text-align: center;
+        max-width: 15em;
+        z-index:1;
+      `
+      el.textContent = text
+      document.body.appendChild(el)
+    }
+    
+    function updateAdviceDisplay (text) {
+      let adviceDiv = document.querySelector('#adviceDisplay')  
+      adviceDiv.textContent = text
+    }
+
+
+
+    console.log(x.animals)
+    const keys = x.animals
+    console.log(keys)
+    keys.forEach( function(x) {
+      writeToPage(x.id)
+      writeToPage(x.name)
+      writeToPage(x.color)
+      writeToPage(x.age)
+      writeToPage(x.gender)
+      console.log(x.attributes.spayed_nuetered)
+      
+      })
+    work(x)
+    console.log(x)
   })
 })
 
