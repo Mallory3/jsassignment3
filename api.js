@@ -42,7 +42,7 @@ function getToken() {
 
 
 const getSomething = (token) => {
-  const url = 'https://api.petfinder.com/v2/animals?type=dog&page=2'
+  const url = 'https://api.petfinder.com/v2/animals?type=bird&page=2'
   const config = {
     headers: {
       'Authorization': 'Bearer  ' + token
@@ -105,9 +105,13 @@ getToken().then(token => {
       writeToPage(x.color)
       writeToPage(x.age)
       writeToPage(x.gender)
-      console.log(x.attributes.spayed_nuetered)
-      
+      writeToPage(x.species)
+      writeToPage(x.url)
+      console.log(x.color)
       })
+
+      const keys2 = x
+      console.log(keys2)
     work(x)
     console.log(x)
   })
