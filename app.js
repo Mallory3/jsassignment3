@@ -22,8 +22,8 @@ function writeAdviceToPageContainter() {
   adviceContainer.id = 'adviceImage'
   adviceContainer.style = `
   height: 100vh;
-  min-width: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1544724677-744ce69a22c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1659&q=80");
+  min-width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1471666875520-c75081f42081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1138&q=80");
   background-repeat: no-repeat;
   backgound-size: cover;
   z-index:0;
@@ -40,14 +40,15 @@ function writeAdviceToPage(text) {
     padding: 20px 40px;
     border-radius: 5px;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Kalam', cursive;
     font-size: 25px;
     display: block;
-    max-width: 20em;
+    text-align: center;
+    max-width: 15em;
     z-index:1;
     position: relative;
-    top: 10em;
-    left: 20em;
+    top: 7em;
+    left: 24.5em;
   `
   adviceDiv.textContent = text
   locateadviceDiv.appendChild(adviceDiv)
@@ -84,16 +85,7 @@ const createButton = document.createElement('button')
 locateButton.appendChild(createButton)
 createButton.textContent = 'Get Advice'
 createButton.id = 'adviceButton'
-createButton.style = `
-z-index=1;
-backgroundColor=black;
-color=white
-width=10em;
-height=5em;
-position: relative;
-top: 100px;
-left: 50em;
-`
+
 /*make button work*/
 const generateAdvice = document.querySelector('#adviceButton')
 generateAdvice.addEventListener('click', function() {

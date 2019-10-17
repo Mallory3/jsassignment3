@@ -12,32 +12,13 @@ GENERAL
   margin: 0 auto;
 }
 
-.primary-button {
-  padding: 10px 30px;
-  border-radius: 30px;
-  background: #333;
-  color: white;
-  border: 1px solid #333;
-  font-size: 14px;
-  margin-right: 10px;
-}
-
-.secondary-button {
-  padding: 10px 30px;
-  border-radius: 30px;
-  background: #777;
-  color: white;
-  border: 1px solid #777;
-  font-size: 14px;
-  margin-right: 10px;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - 
 HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background: #333;
+  background:black;
 }
 
 header nav .wrapper {
@@ -150,4 +131,23 @@ header a {
   }
 }
 
+/* button*/
+#adviceButton {
+
+  font-family: 'Montserrat', sans-serif; 
+  border: 2px solid rgb(2, 32, 25);
+border-top: 2px solid #311047;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f84a06), to(#f023df));
+  padding: 19.5px 39px;
+
+
+  border-radius: 26px;
+  color: white;
+  font-size: 23px;
+  z-index: 1;
+  position: absolute;
+  top: 500px;
+  left:700px;
+
+}
 
