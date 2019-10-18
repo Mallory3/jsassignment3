@@ -4,8 +4,13 @@ GENERAL
 * {
   font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: black;
+}
 .wrapper {
   max-width: 800px;
   width: 90%;
@@ -18,7 +23,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background:black;
+  background:#f87102;
 }
 
 header nav .wrapper {
@@ -29,10 +34,11 @@ header nav .wrapper {
 }
 
 header .logo {
-  background: url('./assets/logo.svg');
-  height: 30px;
-  width: 30px;
-  background-size: 30px;
+  background: url('./assets/owlLogo.svg');
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
 }
 
 header .menu {
@@ -41,6 +47,7 @@ header .menu {
   width: 30px;
   background-size: 30px;
   display: none;
+  
 }
 
 header .close {
@@ -56,7 +63,7 @@ header ul {
   padding: 0;
   display: flex;
   width: 400px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 header li {
@@ -67,20 +74,26 @@ header li {
 }
 
 header a {
-  color: white;
+  color: black;
   text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
  
 }
 
-@media(max-width: 600px) {
+h1 {
+  font-family: 'Mansalva', cursive;
+}
+
+@media(max-width: 750px) {
   header ul {
       position: fixed; 
       top: 0;
       bottom: 0;
       right: -300px;
       width: 300px;
-      height: 100vh;
-      background: #333;
+      height: 20vh;
+      background:rgb(240, 179, 48);
       transition: transform 0.2s; 
       transform: translateX(0px); 
   }
@@ -107,6 +120,7 @@ header a {
       justify-content: start; 
       padding-top: 2em;
       padding-left: 2em;
+      z-index: 1;
   }
 
   header li {
@@ -130,47 +144,34 @@ header a {
       padding-left: 2em;    
   }
 }
+#adviceBox {
+  background-color:black;
+  height: 22vh;
+}
 
 /* button*/
 #adviceButton {
 
-  font-family: 'Montserrat', sans-serif; 
-  border: 2px solid rgb(2, 32, 25);
-border-top: 2px solid #311047;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f84a06), to(#f023df));
+  font-family: 'Quicksand', sans-serif;
+  border: 2px solid rgb(255, 255, 255);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f87102), to(#f8f67a));
   padding: 19.5px 39px;
 
 
   border-radius: 26px;
-  color: white;
+  color:black;
   font-size: 23px;
   z-index: 1;
-  position: absolute;
-  top: 500px;
-  left:700px;
-
-}
-
-/*content*/
-.container {
-  max-width: 900px;
-}
-
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#card {
-  height: 280px;
-  border-radius: 10px;
-  background: rgba(23, 35, 50, 1);
-  flex: 1 230px;
-  margin: 10px;
-  padding: 20px;
+  display: block;
+  margin:auto;
   position: relative;
-  background-color: black;
-  box-shadow: 2px 8px 9px 0px rgba(0, 0, 0, 0.14),
-      11px 11px 6px rgba(0, 0, 0, 0.05);
+  left: 1em;
+  top: 2em;
+  
+ 
+
+
 }
+
+
 

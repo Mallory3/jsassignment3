@@ -21,35 +21,38 @@ function writeAdviceToPageContainter() {
   let adviceContainer = document.createElement('div')
   adviceContainer.id = 'adviceImage'
   adviceContainer.style = `
-  height: 100vh;
-  min-width: 100%;
-  background-image: url("https://images.unsplash.com/photo-1471666875520-c75081f42081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1138&q=80");
+  height: 65vh;
+  max-width: 90vw;
+  background-image: url("https://images.unsplash.com/photo-1532007195987-bb4ddeaf052d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
   background-repeat: no-repeat;
-  backgound-size: cover;
+  backgound-size: contain;
+  background-position: top;
+  display: block;
   z-index:0;
   `
   document.body.appendChild(adviceContainer)
 }
+
 writeAdviceToPageContainter()
 
 function writeAdviceToPage(text) {
-  let locateadviceDiv = document.querySelector('#adviceImage')
+  let locateadviceDiv = document.querySelector('#adviceBox')
   let adviceDiv = document.createElement('div')
   adviceDiv.id = 'adviceDisplay'
   adviceDiv.style = `
     padding: 20px 40px;
     border-radius: 5px;
-    color: black;
-    font-family: 'Kalam', cursive;
+    color: white;
+    font-family: 'Raleway', sans-serif;
     font-size: 25px;
     display: block;
+    margin: auto;
+    margin-top:1em;
     text-align: center;
-    max-width: 15em;
+    max-width: 25em;
+    height: 8em;
     z-index:1;
-    position: relative;
-    top: 7em;
-    left: 24.5em;
-  `
+    `
   adviceDiv.textContent = text
   locateadviceDiv.appendChild(adviceDiv)
 }
@@ -64,17 +67,43 @@ const url = 'https://api.adviceslip.com/advice'
 
 writeAdviceToPage('Loading...')
 
+// .then(x => { 
+//   if(results === "Not found") {
+//     throw "uh oh"
+//   } else{
+    
+//   }
+//  })
+
+
+//  .catch(err => {
+//   updateAdviceDisplay(err)
+//    })
+
+
+
 
 fetch(url)
   .then(response => {return response.json()
   .then(results =>{
+    if(results === "Not Found") {
+        throw "uh oh"
+      } else {
   const keys = Object.keys(results)
+  console.log(results)
   keys.forEach( function(x) {
     const values = results[x]
     updateAdviceDisplay(values.advice)
     })
-  })
+  }  
 })
+})
+
+.catch(err => {
+  updateAdviceDisplay(err)
+   })
+
+
 
 
 //advice menu
@@ -87,7 +116,7 @@ createButton.textContent = 'Get Advice'
 createButton.id = 'adviceButton'
 
 /*make button work*/
-const generateAdvice = document.querySelector('#adviceButton')
+const generateAdvice = document.querySelector('#adviceImage')
 generateAdvice.addEventListener('click', function() {
 fetch(url)
   .then(response => {return response.json()
