@@ -71,7 +71,7 @@ getToken().then(token => {
   
     
     
-
+    Object.keys(x.animals).forEach((key) => {
     function writeIdToPage(text) {
       const el = document.createElement('div')
       el.id = 'Display'
@@ -92,6 +92,7 @@ getToken().then(token => {
       const locateEl = document.querySelector('#card')
       locateEl.appendChild(el)
     }
+    writeIdToPage(x.name)
     
     function updateAdviceDisplay (text) {
       let adviceDiv = document.querySelector('#Display')  
@@ -99,13 +100,20 @@ getToken().then(token => {
     }
 
     //pictures
-    Object.keys(x.animals).forEach((key) => {
+    // Object.keys(x.animals).forEach((key) => {
       const img = document.createElement("img");
-      const keyss = x.animals
-      img.setAttribute("src", keyss[key].photos[0].large);
+      img.style =`
+      width: 25vmax;
+      height: 25vmax;
+      `
+      const y = x.animals
+      img.setAttribute("src", y[key].photos[0].large);
       const locateImg = document.querySelector('#card')
       locateImg.appendChild(img);
-      console.log(key)
+      console.log(x.animals)
+    
+      //name
+
     })
     
 
