@@ -66,13 +66,14 @@ p {
 
 .card .box .name {
   color:black;
-  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  display: block;
   margin: auto;
-  text-transform: uppercase;
-  margin-right: auto;
+  margin-left: 5em;
+  text-align: center;
   transform: translateY(80px);
   transition: 0.35s;
-  font-weight: 300;
 }
 
 .card:hover .box .name {
