@@ -42,7 +42,7 @@ function getToken() {
 
 
 const getSomething = (token) => {
-  const url = 'https://api.petfinder.com/v2/animals?type=bird&page=2'
+  const url = 'https://api.petfinder.com/v2/animals?type=bird&page=5'
   const config = {
     headers: {
       'Authorization': 'Bearer  ' + token
@@ -67,32 +67,47 @@ function work () {
 
 getToken().then(token => {
   getSomething(token).then(x => {
+  
+  
     
     
 
-    function writeToPage(text) {
+    function writeIdToPage(text) {
       const el = document.createElement('div')
       el.id = 'Display'
       el.style = `
-        padding: 20px 40px;
-        border-radius: 5px;
-        color: white;
-        background-color: black;
-        font-family: 'Kalam', cursive;
-        font-size: 25px;
-        display: block;
-        text-align: center;
-        max-width: 15em;
-        z-index:1;
+      height: 280px;
+      border-radius: 10px;
+      background: rgba(23, 35, 50, 1);
+      flex: 1 230px;
+      margin: 10px;
+      padding: 20px;
+      position: relative;
+      background-color: black;
+      box-shadow: 2px 8px 9px 0px rgba(0, 0, 0, 0.14),
+      11px 11px 6px rgba(0, 0, 0, 0.05);
+      color:white;
       `
       el.textContent = text
-      document.body.appendChild(el)
+      const locateEl = document.querySelector('#card')
+      locateEl.appendChild(el)
     }
     
     function updateAdviceDisplay (text) {
-      let adviceDiv = document.querySelector('#adviceDisplay')  
+      let adviceDiv = document.querySelector('#Display')  
       adviceDiv.textContent = text
     }
+
+    //pictures
+    Object.keys(x.animals).forEach((key) => {
+      const img = document.createElement("img");
+      const keyss = x.animals
+      img.setAttribute("src", keyss[key].photos[0].large);
+      const locateImg = document.querySelector('#card')
+      locateImg.appendChild(img);
+      console.log(key)
+    })
+    
 
 
 
@@ -100,18 +115,20 @@ getToken().then(token => {
     const keys = x.animals
     console.log(keys)
     keys.forEach( function(x) {
-      writeToPage(x.id)
-      writeToPage(x.name)
-      writeToPage(x.color)
-      writeToPage(x.age)
-      writeToPage(x.gender)
-      writeToPage(x.species)
-      writeToPage(x.url)
+    //   writeIdToPage(keys[0].breeds.primary)
+      // writeIdToPage(x.name)
+      // writeToPage(x.color)
+      // writeToPage(x.age)
+      // writeToPage(x.gender)
+      // writeToPage(x.species)
+      // writeToPage(x.url)
       console.log(x.color)
       })
 
-      const keys2 = x
-      console.log(keys2)
+      console.log(keys[2].photos[0].small)
+
+      const keys2 = keys.contact
+      console.log(keys[0].breeds)
     work(x)
     console.log(x)
   })

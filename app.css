@@ -151,3 +151,26 @@ border-top: 2px solid #311047;
 
 }
 
+/*content*/
+.container {
+  max-width: 900px;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#card {
+  height: 280px;
+  border-radius: 10px;
+  background: rgba(23, 35, 50, 1);
+  flex: 1 230px;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: black;
+  box-shadow: 2px 8px 9px 0px rgba(0, 0, 0, 0.14),
+      11px 11px 6px rgba(0, 0, 0, 0.05);
+}
+
