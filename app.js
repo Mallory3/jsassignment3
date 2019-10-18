@@ -62,33 +62,17 @@ function updateAdviceDisplay (text) {
   adviceDiv.textContent = text
 }
 
-
 const url = 'https://api.adviceslip.com/advice'
 
 writeAdviceToPage('Loading...')
-
-// .then(x => { 
-//   if(results === "Not found") {
-//     throw "uh oh"
-//   } else{
-    
-//   }
-//  })
-
-
-//  .catch(err => {
-//   updateAdviceDisplay(err)
-//    })
-
-
-
 
 fetch(url)
   .then(response => {return response.json()
   .then(results =>{
     if(results === "Not Found") {
         throw "uh oh"
-      } else {
+      } 
+      else {
   const keys = Object.keys(results)
   console.log(results)
   keys.forEach( function(x) {
@@ -100,13 +84,9 @@ fetch(url)
 })
 
 .catch(err => {
-  updateAdviceDisplay(err)
+  updateAdviceDisplay("Owl be back with more advice shortly!")
+  console.log(err)
    })
-
-
-
-
-//advice menu
 
 /*create button*/
 const locateButton = document.querySelector("#adviceImage")

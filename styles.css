@@ -12,33 +12,28 @@ p {
 }
 
 .card {
-  height: 90vh;
+  height: 90.9vh;
   width: 100%;
   position: relative;
-  background: #222;
-  
+  background: rgb(189, 152, 51);
   background: 
-   linear-gradient(rgba(48,133,163,0.1), rgba(48,133,163, 0.1)),      
-   url('https://images.unsplash.com/photo-1467811884194-ae868cd3f090?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
-    background-size: cover;
+    linear-gradient(rgba(175, 153, 82, 0.1), rgba(163, 117, 79, 0.1)),      
+    url('https://images.unsplash.com/photo-1467811884194-ae868cd3f090?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-size: cover;
   background-position: left;
   padding-top: 100px;
-   overflow: hidden;
-  
-  
+  overflow: hidden;
 }
 
 .card .words {
   color: white;
   font-size: 40px;
   margin: 0 auto;
-  max-width:300px;
   text-align: center; 
   transform: translateY(100px);
   transition: 0.4s;
   opacity: 0;
   font-weight: 300;
- 
 }
 
 .card:hover .words {
@@ -97,7 +92,6 @@ p {
   border-radius: 40px;
   transform: translateY(100px);
   transition: 0.35s;
-  
 }
 
 .card i {
