@@ -1,3 +1,5 @@
+
+/* playing around with the css from your codepen*/
 /* - - - - - - - - - - - - - - - - - - - - - - - - 
 GENERAL
 - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -156,7 +158,7 @@ h1 {
       padding-top: 2em;
       padding-left: 2em;
       z-index: 1;
-      border-bottom-left-radius: 5%;
+      border-bottom-left-radius: 7%;
   }
 
   header li {
