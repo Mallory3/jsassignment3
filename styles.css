@@ -120,7 +120,7 @@ p {
 }
 
 
-@media(max-width: 600px) {
+@media(max-width: 775px) {
   .card {
     height: 60vh;
     width: 100%;

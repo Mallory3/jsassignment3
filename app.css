@@ -120,7 +120,7 @@ h1 {
   left: 1em;
 }
 
-@media(max-width: 750px) {
+@media(max-width: 775px) {
   header ul {
       position: fixed; 
       top: 0;
