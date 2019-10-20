@@ -24,7 +24,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background: purple;
+  background: pink;
   background-attachment: fixed;
 }
 
@@ -190,8 +190,8 @@ h1 {
   }
 
   div #adviceDisplay {
-    margin-top: 2em;
-    max-width: 22em;
+    margin-top: 6em;
+    max-width: 20em;
     height: 5em;
     font-size: 21px;
   }
