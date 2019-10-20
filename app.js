@@ -21,10 +21,11 @@ function writeAdviceToPageContainter() {
   let adviceContainer = document.createElement('div')
   adviceContainer.id = 'adviceImage'
   adviceContainer.style = `
-  height: 65vh;
+  height: 60vh;
   max-width: 90vw;
   background-image: url("https://images.unsplash.com/photo-1532007195987-bb4ddeaf052d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: top;
   display: block;
   z-index:0;

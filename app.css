@@ -148,7 +148,17 @@ h1 {
   background-position: top;
   display: block;
   }
+  #adviceBox {
+    height: 10vh;
+    margin-top:0;
+  }
+
+  #adviceButton {
+    position: relative;
+    right: 17em;
+  }
 }
+
 #adviceBox {
   background-color:black;
   height: 16vh;
@@ -169,7 +179,7 @@ h1 {
   display: block;
   margin:auto;
   position: relative;
-  left: 3em;
+  left: 1em;
 }
 
 
