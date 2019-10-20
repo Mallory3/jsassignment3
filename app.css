@@ -24,7 +24,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background: pink;
+  background: red;
   background-attachment: fixed;
 }
 
@@ -181,18 +181,18 @@ h1 {
   background-position: center;
   display: block;
   position: relative;
-  top: 9em;
+  top: 7em;
   }
 
   #adviceBox {
-    height: 8vh;
-    margin-top: 2em;
+    height: 6vh;
+    margin-top: 3em;
   }
 
   div #adviceDisplay {
-    margin-top: 6em;
+    margin-top: 1em;
     max-width: 20em;
-    height: 5em;
+    height: em;
     font-size: 21px;
   }
 
