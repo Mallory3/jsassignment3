@@ -100,6 +100,10 @@ h1 {
   font-size: 25px;
 }
 
+#adviceImage {
+  background-size: contain;
+}
+
 
 /* button*/
 #adviceButton {
@@ -154,7 +158,7 @@ h1 {
       padding-top: 2em;
       padding-left: 2em;
       z-index: 1;
-      border-bottom-left-radius: 10%;
+      border-bottom-left-radius: 15%;
   }
 
   header li {
@@ -182,6 +186,7 @@ h1 {
   background-position: center;
   display: block;
   position: relative;
+  background-size: cover;
   top: 7em;
   }
 
