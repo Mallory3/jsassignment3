@@ -40,14 +40,12 @@ function writeAdviceToPage(text) {
   let adviceDiv = document.createElement('div')
   adviceDiv.id = 'adviceDisplay'
   adviceDiv.style = `
-    padding: 20px 40px;
-    border-radius: 5px;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
     display: block;
     margin: auto;
-    margin-top:1em;
+    margin-top:6em;
     text-align: center;
     max-width: 25em;
     height: 8em;

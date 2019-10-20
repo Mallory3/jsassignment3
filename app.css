@@ -146,7 +146,7 @@ h1 {
 }
 #adviceBox {
   background-color:black;
-  height: 22vh;
+  height: 16vh;
 }
 
 /* button*/
@@ -165,12 +165,7 @@ h1 {
   display: block;
   margin:auto;
   position: relative;
-  left: 1em;
-  top: 2em;
-  
- 
-
-
+  left: 3em;
 }
 
 
