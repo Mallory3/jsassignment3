@@ -156,7 +156,7 @@ h1 {
       padding-top: 2em;
       padding-left: 2em;
       z-index: 1;
-      border-bottom-left-radius: 30%;
+      border-bottom-left-radius: 5%;
   }
 
   header li {
