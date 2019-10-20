@@ -115,7 +115,7 @@ h1 {
   display: block;
   margin:auto;
   position: relative;
-  left: 1em;
+  left: 2em;
 }
 
 @media(max-width: 750px) {
@@ -154,6 +154,7 @@ h1 {
       padding-top: 2em;
       padding-left: 2em;
       z-index: 1;
+      border-bottom-left-radius: 10%;
   }
 
   header li {
