@@ -24,7 +24,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background green;
+  background: green;
   background-attachment: fixed;
 }
 
