@@ -44,8 +44,6 @@ function writeAdviceToPage(text) {
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
     display: block;
-    margin: auto;
-    margin-top:6em;
     text-align: center;
     max-width: 25em;
     height: 8em;
