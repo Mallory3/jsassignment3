@@ -144,13 +144,16 @@ h1 {
   #adviceImage {
   min-height: 60vh;
   max-width: 70vw;
-  background-size: cover;
-  background-position: top;
+  background-size: 100%;
+  background-position: center;
   display: block;
   }
   #adviceBox {
     height: 10vh;
-    margin-top:0;
+  }
+
+  #adviceDisplay {
+    margin-top: 0;
   }
 
   #adviceButton {
