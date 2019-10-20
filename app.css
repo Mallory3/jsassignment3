@@ -15,6 +15,7 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 0 auto;
+  background-attachment: fixed;
 }
 
 
@@ -24,6 +25,7 @@ HEADER
 header {
   height: 80px;
   background:blue;
+  background-attachment: fixed;
 }
 
 header nav .wrapper {
@@ -170,25 +172,28 @@ h1 {
   }
 
   #adviceImage {
-  min-height: 60vh;
+  max-height: 60vh;
   max-width: 70vw;
   background-size: 100%;
   background-position: center;
   display: block;
+  position: relative;
+  top: 7em;
   }
+
   #adviceBox {
     height: 8vh;
     margin-top: 0;
   }
 
   div #adviceDisplay {
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
   #adviceButton {
     position: relative;
     right: 17em;
-    top: 3em;
+    top: 1em;
   }
 }
 
