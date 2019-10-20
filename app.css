@@ -15,7 +15,6 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 0 auto;
-  background-attachment: fixed;
 }
 
 
@@ -25,7 +24,6 @@ HEADER
 header {
   height: 80px;
   background: #f86402;
-  background-attachment: fixed;
 }
 
 header nav .wrapper {
