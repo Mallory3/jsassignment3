@@ -129,9 +129,6 @@ h1 {
       padding: .5em;
   }
 
-
-  
-
   .closedState {
       transform: translateX(0px);
       transition: transform 0.2s; 
@@ -143,11 +140,17 @@ h1 {
       padding-top: 2em;
       padding-left: 2em;    
   }
+
+  #adviceImage {
+  min-height: 40vh;
+  max-width: 70vw;
+  }
 }
 #adviceBox {
   background-color:black;
   height: 16vh;
 }
+
 
 /* button*/
 #adviceButton {
@@ -156,8 +159,6 @@ h1 {
   border: 2px solid rgb(255, 255, 255);
   background: -webkit-gradient(linear, left top, left bottom, from(#f87102), to(#f8f67a));
   padding: 19.5px 39px;
-
-
   border-radius: 26px;
   color:black;
   font-size: 23px;
