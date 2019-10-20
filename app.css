@@ -24,7 +24,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background: green;
+  background: coral;
   background-attachment: fixed;
 }
 
@@ -95,6 +95,8 @@ h1 {
 #adviceDisplay {
   margin: auto;
   margin-top: 6em;
+  max-width: 25em;
+  height: 8em;
 }
 
 
@@ -178,7 +180,7 @@ h1 {
   background-position: center;
   display: block;
   position: relative;
-  top: 7em;
+  top: 9em;
   }
 
   #adviceBox {
@@ -188,12 +190,14 @@ h1 {
 
   div #adviceDisplay {
     margin-top: 2em;
+    max-width: 24em;
+    height: 7em;
   }
 
   #adviceButton {
     position: relative;
     right: 17em;
-    top: 1em;
+    top: 0em;
   }
 }
 

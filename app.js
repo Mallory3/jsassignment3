@@ -45,8 +45,6 @@ function writeAdviceToPage(text) {
     font-size: 25px;
     display: block;
     text-align: center;
-    max-width: 25em;
-    height: 8em;
     z-index:1;
     `
   adviceDiv.textContent = text
