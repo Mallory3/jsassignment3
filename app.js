@@ -42,7 +42,6 @@ function writeAdviceToPage(text) {
   adviceDiv.style = `
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
     display: block;
     text-align: center;
     z-index:1;
