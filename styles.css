@@ -122,7 +122,7 @@ p {
 
 @media(max-width: 650px) {
   .card {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     position: relative;
     background: rgb(189, 152, 51);
@@ -142,27 +142,26 @@ p {
     text-align: center; 
     font-weight: 300;
     position: relative;
-    left: 10%;
-    bottom: 17%;
+    left: 2%;
+    bottom: 40%;
   }
 
   .box {
     position: relative;
     background: -webkit-gradient(linear, left top, left bottom, from(#f87902), to(#fad842));
-    top: 35vh;
+    top: 24vh;
     width: 100%;
-    height: 33vh;
+    height: 36.5vh;
     display: flex;
-    align-items: center;
   }
   
   .card .box .name {
     color:black;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
+    padding: 1em;
     display: block;
     margin: auto;
-    margin-left: 2em;
     text-align: center;
   }
   
