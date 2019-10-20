@@ -24,7 +24,7 @@ HEADER
 - - - - - - - - - - - - - - - - - - - - - - - - */
 header {
   height: 80px;
-  background: red;
+  background: #f86402;
   background-attachment: fixed;
 }
 
@@ -191,8 +191,7 @@ h1 {
 
   div #adviceDisplay {
     margin-top: 1em;
-    max-width: 20em;
-    height: em;
+    max-width: 90%;
     font-size: 21px;
   }
 
