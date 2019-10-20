@@ -150,15 +150,17 @@ h1 {
   }
   #adviceBox {
     height: 10vh;
+    margin-top: 0;
   }
 
-  #adviceDisplay {
-    margin-top: 0;
+  div #adviceDisplay {
+    margin: 0;
   }
 
   #adviceButton {
     position: relative;
     right: 17em;
+    top: 3em;
   }
 }
 
