@@ -142,8 +142,11 @@ h1 {
   }
 
   #adviceImage {
-  min-height: 40vh;
+  min-height: 60vh;
   max-width: 70vw;
+  background-size: cover;
+  background-position: top;
+  display: block;
   }
 }
 #adviceBox {
