@@ -78,7 +78,7 @@ fetch(url)
 .catch(err => {
   updateAdviceDisplay("Owl be back with more advice shortly!")
   console.log(err)
-   })
+  })
 
 /*create button*/
 const locateButton = document.querySelector("#adviceImage")

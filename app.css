@@ -13,12 +13,12 @@ GENERAL
 body {
   background-color: black;
 }
+
 .wrapper {
   max-width: 800px;
   width: 90%;
   margin: 0 auto;
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - 
 HEADER
@@ -49,7 +49,6 @@ header .menu {
   width: 30px;
   background-size: 30px;
   display: none;
-  
 }
 
 header .close {
@@ -72,7 +71,6 @@ header li {
   color: white;
   list-style: none;
   margin: 0;
- 
 }
 
 header a {
@@ -80,7 +78,6 @@ header a {
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
- 
 }
 
 h1 {
@@ -104,10 +101,8 @@ h1 {
   background-size: contain;
 }
 
-
 /* button*/
 #adviceButton {
-
   font-family: 'Quicksand', sans-serif;
   border: 2px solid rgb(255, 255, 255);
   background: -webkit-gradient(linear, left top, left bottom, from(#f87102), to(#f8f67a));
@@ -136,47 +131,47 @@ h1 {
   }
 
   header .menu {
-      display: block;
+    display: block;
   }
 
   header .close {
-      display:block;
-      position: fixed;
-      top: 1em;
-      bottom: 0;
-      right: 1em;
+    display:block;
+    position: fixed;
+    top: 1em;
+    bottom: 0;
+    right: 1em;
   }
  
   .openState {
-      transform: translateX(-300px); 
-      transition: transform 0.2s; 
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      text-align: left;
-      justify-content: start; 
-      padding-top: 2em;
-      padding-left: 2em;
-      z-index: 1;
-      border-bottom-left-radius: 7%;
+    transform: translateX(-300px); 
+    transition: transform 0.2s; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start; 
+    padding-top: 2em;
+    padding-left: 2em;
+    z-index: 1;
+    border-bottom-left-radius: 7%;
   }
 
   header li {
-      color: white;
-      text-decoration: none;
-      padding: .5em;
+    color: white;
+    text-decoration: none;
+    padding: .5em;
   }
 
   .closedState {
-      transform: translateX(0px);
-      transition: transform 0.2s; 
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      text-align: left;
-      justify-content: start; 
-      padding-top: 2em;
-      padding-left: 2em;    
+    transform: translateX(0px);
+    transition: transform 0.2s; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start; 
+    padding-top: 2em;
+    padding-left: 2em;    
   }
 
   #adviceImage {
